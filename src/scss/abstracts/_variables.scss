@@ -1,0 +1,31 @@
+$font-w-r: 400;
+$font-w-m: 500;
+$font-w-b: 600;
+$font-s-16: 16px;
+$font-s-20: 20px;
+$font-s-24: 24px;
+$font-s-32: 32px;
+$font-c-header: #fff;
+$font-c-header-hover: #fff;
+$main-bg-c : #21242e;
+
+
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-2Black.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Black.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
