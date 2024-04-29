@@ -4,11 +4,16 @@ import Modal from './Modal';
 
 const Project = () => {
 
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalStatus, setModalStatus] = useState(false);
   const [textVal, setTextVal] = useState("");
   const [imgUrl, setImgUrl] = useState("");  
+
   const handleModalOpen = () => {
-    setModalOpen(true);
+    setModalStatus(true);
+  }
+
+  const handleModalClose = () => {
+    setModalStatus(false);
   }
 
   return (
@@ -48,8 +53,8 @@ const Project = () => {
         </ul>
       </div>
 
-      {modalOpen &&
-        <Modal /> 
+      {modalStatus &&
+        <Modal handleModalClose={handleModalClose} /> 
       }
     </>
   )
