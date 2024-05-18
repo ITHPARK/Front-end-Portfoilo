@@ -31,32 +31,28 @@ const About = () => {
       <div className='content_box'>
         <ul className='skills_list'>
           <li>
-            <div className='skill_card'>
-              <div className='skill_box '>
-                <img src="/images/icons/ico_html.png" alt="html"/>
-              </div>
-              <div className='skill_comment'>
-                <p>
-                  적절한 태그사용과 효율적인 구조를 작업할 수 있습니다.
-                  퍼블리셔로 재직하며 디자인 시안에 맞게 여러 레이아웃 또는 기능들이 들어가는 구조들을 작업해보았습니다.
-                </p>
-              </div>  
+            <div className='skill_box html'>
+              <img src="/images/icons/ico_html.png" alt="html"/>
             </div>
+            <div className='skill_comment'>
+              <p>
+                적절한 태그사용과 효율적인 구조를 작업할 수 있습니다.
+                퍼블리셔로 재직하며 디자인 시안에 맞게 여러 레이아웃 또는 기능들이 들어가는 구조들을 작업해보았습니다.
+              </p>
+            </div>      
           </li>
           <li>
-            <div className='skill_card'>
-              <div className='skill_box'>
-                <img src="/images/icons/ico_css.png" alt="css"/>
+              <div className='skill_box css'>
+              
+                <img src="images/icons/ico_css.png" alt="css"/>
               </div>
               <div className='skill_comment'>
-               <p>작업한 Html을 바탕으로 효율적인 스타일 작업을 할 수 있습니다.</p>
+                <p>작업한 Html을 바탕으로 효율적인 스타일 작업을 할 수 있습니다.</p>
               </div>
-            </div>
           </li>
           <li>
-           <div className='skill_card'>  
-              <div className='skill_box'>
-                <img src="/images/icons/ico_js.png" alt="js"/>
+              <div className='skill_box js'>
+                <img src="images/icons/ico_js.png" alt="js"/>
               </div>
               <div className='skill_comment'>
                 <p>
@@ -64,29 +60,25 @@ const About = () => {
                   자바스크립트의 비동기 통신 , 호이스팅, 이벤트루프 등의 개념을 이해하고 있습니다.
                 </p>
               </div>
-            </div>
           </li>
           <li>
-            <div className='skill_card'>  
-              <div className='skill_box'>
+             <div className='skill_box jquery'>
                 <img src="/images/icons/ico_jquery.png" alt="jquery"/>
               </div>
               <div className='skill_comment'>
                 <p>
-                  자바스크립트 지식을 바탕으로 여러가지 화면 이벤트를 구현할 수 있습니다.
+                  자바스크립트 지식을 바탕으로 js에서는 구현이 비교적 복잡한 swiper, jquery ui을 활용한 인터렉션 등 여러가지 플러그인을 사용하여 작업이 가능합니다.                 
+                  
                 </p>
               </div>
-            </div>
           </li>
           <li>
-           <div className='skill_card'>  
-              <div className='skill_box'>
+              <div className='skill_box react'>
                 <img src="/images/icons/ico_react.png" alt="react"/>
               </div>
               <div className='skill_comment'>
                 <p></p>
               </div>
-            </div>
           </li>
         </ul>               
       </div>

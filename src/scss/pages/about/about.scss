@@ -22,7 +22,6 @@
 
         p {
 
-
             font-size: 16px;
             font-weight: 400;
             line-height: 1.5;
@@ -42,82 +41,42 @@
         
 
         li {
+
             margin-bottom: 5px;
-            width: 230px;
-            height: 230px;
+            padding: 20px 0;
+            width: 100%;
+            display: flex;
+            gap: 25px;
             position: relative;
-            
             border-radius: 8px;
-            
             perspective: 1100px;
 
-            .skill_card {
-
-                width: 100%;
-                height: 100%;
-                position: relative;
+            .skill_box { 
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
                 border-radius: 8px;
 
-                transition: .4s;
-
-                //z축까지 나타낼 수 있게하는 설정
-                transform-style: preserve-3d;
-            
-                box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.8);
-
-
-                .skill_box { 
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: absolute;
-                    background-color: #fff;
-                    border-radius: 8px;
-    
-                    // 뒤집어 졌을 때는 안보이게 하는 설정
-                    backface-visibility: hidden;
-                }
-    
-                .skill_comment {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    backface-visibility: hidden;
-                    background-color: #434d73;
-                    border-radius: 8px;
-    
-                    // comment영억 뒤집어 놓기
-                    transform: rotateY(180deg);
-
-                    p {
-
-                        padding: 20px;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        text-align: center;
-                        
-
-                        font-size: 13px;
-                        font-weight: 400;
-                        line-height: 1.4;
-                        letter-spacing: -0.03em;
-                        
-                    }
+                img {
+                    width: 80%;
                 }
             }
 
-            &:hover {
-                .skill_card {
-                    transform: rotateY(-180deg);
+    
+            .skill_comment {
+                display: flex;
+                align-items: center;
+                flex: 1;
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.2;
+                    letter-spacing: -0.03em;
                 }
             }
-            
         }
-
     }
-
 }
