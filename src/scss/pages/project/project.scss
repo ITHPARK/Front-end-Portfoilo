@@ -17,9 +17,15 @@
             transition: all .3s;
         }
 
-        p {
-            margin-top: 13px;
-            text-align: center;
+        a{
+            width: 100%;
+            display: block;
+
+            h4 {
+                margin-top: 13px;
+                text-align: center;
+            }
+            
         }
 
         &:hover {
