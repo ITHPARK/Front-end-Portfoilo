@@ -15,11 +15,6 @@ const aside = () => {
                     Project
                 </Link>    
             </li>
-            <li>
-                <Link to="contact">
-                    contact
-                </Link>    
-            </li>
         </ul>
     </div>
   )

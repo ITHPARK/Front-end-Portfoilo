@@ -21,7 +21,7 @@ const About = () => {
         <ul className='skills_list'>
           <li>
             <div className='skill_box html'>
-              <img src="/images/icons/ico_html.png" alt="html"/>
+              <img src="images/icons/ico_html.png" alt="html"/>
             </div>
             <div className='skill_comment'>
               <h3>HTML5</h3>
@@ -54,7 +54,7 @@ const About = () => {
           </li>
           <li>
              <div className='skill_box jquery'>
-                <img src="/images/icons/ico_jquery.png" alt="jquery"/>
+                <img src="images/icons/ico_jquery.png" alt="jquery"/>
               </div>
               <div className='skill_comment'>
                 <h3>JQUERY</h3>
@@ -65,7 +65,7 @@ const About = () => {
           </li>
           <li>
               <div className='skill_box react'>
-                <img src="/images/icons/ico_react.png" alt="react"/>
+                <img src="images/icons/ico_react.png" alt="react"/>
               </div>
               <div className='skill_comment'>
                 <h3>REACT</h3>
@@ -77,7 +77,7 @@ const About = () => {
           </li>
           <li>
               <div className='skill_box react'>
-                <img src="/images/icons/ico_redux.png" alt="react"/>
+                <img src="images/icons/ico_redux.png" alt="react"/>
               </div>
               <div className='skill_comment'>
                 <h3>Redux</h3>
@@ -88,7 +88,7 @@ const About = () => {
           </li>
           <li>
               <div className='skill_box react'>
-                <img src="/images/icons/ico_recoil.png" alt="react"/>
+                <img src="images/icons/ico_recoil.png" alt="react"/>
               </div>
               <div className='skill_comment'>
                 <h3>Recoil</h3>

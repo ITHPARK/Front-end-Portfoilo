@@ -5,7 +5,10 @@ import {Link} from 'react-router-dom';
 
 const Project = () => {
 
+  //
   const [modalStatus, setModalStatus] = useState(false);
+
+  //프로젝트 리스트 객체
   const [info, setInfo] = useState([
     {
       id: "netflix-clone-coding",
@@ -21,8 +24,8 @@ const Project = () => {
               ] 
       },
       url: "https://react-netflix-3b61e.web.app/",
-      img: "/images/netflix.jpg",
-      img2: "/images/icons/ico_netflix.png"
+      img: "images/netflix.jpg",
+      img2: "images/icons/ico_netflix.png"
     },
     {
       id: "react-recoil-app",
@@ -37,8 +40,8 @@ const Project = () => {
               ] 
       },
       url: "https://react-netflix-3b61e.web.app/",
-      img: "/images/Recoil.jpg",
-      img2: "/images/icons/ico_recoil.png"
+      img: "images/Recoil.jpg",
+      img2: "images/icons/ico_recoil.png"
     },
     {
       id: "react-redux-app",
@@ -46,24 +49,28 @@ const Project = () => {
       text: {
         skill: ['REACT', 'REDUX'],
         word: [
-                "jsonplaceholder post api를 활용한 비동기 요청으로 데이터를 받아 카페 글 리스트를 만들었습니다.", 
-                "데이터로 내려받은 전체 글 개수에 따라 페이징을 한 페이지에 10개의 글을 노출하도록 구현하였습니다.",
-                "FACEBOOK에서 출시한 전역 상태관리 라이브러리 RECOIL을 활용하여 관리자 페이지에서 글의 비공개 제목 수정이 가능합니다.",
-
+                "전역상태관리 라이브러리 redux를 이용하여 장바구니 상품 리스트를 만들었습니다.", 
+                "reducer 함수를 생성하여 상품을 담고 장바구니로 이동하여 상품의 수량과 삭제를 설정하고 총 결제금액까지 나타내도록 구현하였습니다.",
               ] 
       },
       url: "https://react-netflix-3b61e.web.app/",
-      img: "/images/Redux.jpg",
-      img2: "/images/icons/ico_redux.png"
+      img: "images/Redux.jpg",
+      img2: "images/icons/ico_redux.png"
     },
   ]);
+
+  //클릭한 프로젝트 객체를 모달에 전달하기 위한 state
   const [selectedProjectId, setSelectedProjectId] = useState(null);
 
+  //모달창 열기
   const handleModalOpen = (item) => {
     setModalStatus(true);
+
+    //모달에 전달할 객체 정보를 할당
     setSelectedProjectId(item);
   }
 
+  //모달창 닫기
   const handleModalClose = () => {
     setModalStatus(false);
   }
@@ -75,22 +82,24 @@ const Project = () => {
       <div className="article project">
         <h2 className='content_tit'>Project</h2>
 
-        <ul className='project_list'>
-        {
-          info.map((item) => {
-            return(
-              <li onClick={() => handleModalOpen(item)} key={item.id}>
-              <Link>
-                <div className='project_box'>
-                  <img src={item.img2} alt=""/>
-                </div>
-                <h4>{item.title}</h4>
-              </Link> 
-            </li>
-            )
-          })
-        }
-        </ul>
+        <div className='content_box'>
+          <ul className='project_list'>
+          {
+            info.map((item) => {
+              return(
+                <li onClick={() => handleModalOpen(item)} key={item.id}>
+                <Link>
+                  <div className='project_box'>
+                    <img src={item.img2} alt=""/>
+                  </div>
+                  <h4>{item.title}</h4>
+                </Link> 
+              </li>
+              )
+            })
+          }
+          </ul>
+        </div>
       </div>
 
       {modalStatus &&
@@ -101,7 +110,7 @@ const Project = () => {
           url = {selectedProjectId.url}
           img = {selectedProjectId.img}
         /> 
-      }
+      } 
     </>
   )
 }
