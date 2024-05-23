@@ -39,7 +39,7 @@ const Project = () => {
 
               ] 
       },
-      url: "https://react-netflix-3b61e.web.app/",
+      url: "https://ithpark.github.io/react-recoil-app/",
       img: "images/Recoil.jpg",
       img2: "images/icons/ico_recoil.png"
     },
@@ -53,7 +53,7 @@ const Project = () => {
                 "reducer 함수를 생성하여 상품을 담고 장바구니로 이동하여 상품의 수량과 삭제를 설정하고 총 결제금액까지 나타내도록 구현하였습니다.",
               ] 
       },
-      url: "https://react-netflix-3b61e.web.app/",
+      url: "https://ithpark.github.io/react-redux-app/",
       img: "images/Redux.jpg",
       img2: "images/icons/ico_redux.png"
     },
