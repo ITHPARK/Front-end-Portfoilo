@@ -37,8 +37,24 @@ const Project = () => {
               ] 
       },
       url: "https://react-netflix-3b61e.web.app/",
-      img: "/images/netflix.jpg",
+      img: "/images/Recoil.jpg",
       img2: "/images/icons/ico_recoil.png"
+    },
+    {
+      id: "react-redux-app",
+      title: "Redux을 활용한 장바구니 페이지",
+      text: {
+        skill: ['REACT', 'REDUX'],
+        word: [
+                "jsonplaceholder post api를 활용한 비동기 요청으로 데이터를 받아 카페 글 리스트를 만들었습니다.", 
+                "데이터로 내려받은 전체 글 개수에 따라 페이징을 한 페이지에 10개의 글을 노출하도록 구현하였습니다.",
+                "FACEBOOK에서 출시한 전역 상태관리 라이브러리 RECOIL을 활용하여 관리자 페이지에서 글의 비공개 제목 수정이 가능합니다.",
+
+              ] 
+      },
+      url: "https://react-netflix-3b61e.web.app/",
+      img: "/images/Redux.jpg",
+      img2: "/images/icons/ico_redux.png"
     },
   ]);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
