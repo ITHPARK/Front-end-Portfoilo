@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import {Link} from 'react-router-dom'
+import {useOnClickOutside} from '../hooks/useOnClickOutsie'
 
 //
-const Modal = ({handleModalClose, title, text, url, img}) => {
+const Modal = ({setModalStatus, handleModalClose, title, text, url, img, git}) => {
+
+  const ref = useRef();
+
+  useOnClickOutside(ref, () => {
+
+    setModalStatus(false);
+    
+});
+
 
 
   return (
-    <div className='modal_wrap'>
+    <div className='modal_wrap' >
         <div className='dim'></div>
-        <div className='modal'>
+        <div className='modal' ref={ref}>
             <div className='modal_img_box'>
               <img src={img} alt="img"/>
             </div>
@@ -31,8 +41,12 @@ const Modal = ({handleModalClose, title, text, url, img}) => {
                   }
                 </ul>
                 <div className='url'>
-                  <span>url : </span>
+                  <span>SITE URL : </span>
                   <Link to={url} target='_blank'>{url}</Link>
+                </div>
+                <div className='url'>
+                  <span>GITHUB : </span>
+                  <Link to={git} target='_blank'>{git}</Link>
                 </div>
                 
             </div>

@@ -25,7 +25,8 @@ const Project = () => {
       },
       url: "https://react-netflix-3b61e.web.app/",
       img: "images/netflix.jpg",
-      img2: "images/icons/ico_netflix.png"
+      img2: "images/icons/ico_netflix.png",
+      git: "https://github.com/ITHPARK/Nexflix-App"
     },
     {
       id: "react-recoil-app",
@@ -41,7 +42,8 @@ const Project = () => {
       },
       url: "https://ithpark.github.io/react-recoil-app/",
       img: "images/Recoil.jpg",
-      img2: "images/icons/ico_recoil.png"
+      img2: "images/icons/ico_recoil.png",
+      git: "https://github.com/ITHPARK/react-recoil-app"
     },
     {
       id: "react-redux-app",
@@ -55,7 +57,8 @@ const Project = () => {
       },
       url: "https://ithpark.github.io/react-redux-app/",
       img: "images/Redux.jpg",
-      img2: "images/icons/ico_redux.png"
+      img2: "images/icons/ico_redux.png",
+      git: "https://github.com/ITHPARK/react-redux-app"
     },
   ]);
 
@@ -104,11 +107,14 @@ const Project = () => {
 
       {modalStatus &&
         <Modal 
+          setModalStatus = {setModalStatus}
           handleModalClose={handleModalClose} 
           title = {selectedProjectId.title}
           text = {selectedProjectId.text}
           url = {selectedProjectId.url}
           img = {selectedProjectId.img}
+          img2 = {selectedProjectId.img2}
+          git={selectedProjectId.git}
         /> 
       } 
     </>
