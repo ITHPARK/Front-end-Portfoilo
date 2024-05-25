@@ -23,8 +23,8 @@ const Project = () => {
                 "쿼리스트링 검색어를 활용하여 다시 비동기 요청을 보낸 후 검색어 관련 영화를 제공하는 검색기능을 구현했습니다.", 
               ] 
       },
-      url: "https://react-netflix-3b61e.web.app/",
-      img: "images/netflix.jpg",
+      url: "https://react-netflix-65fce.web.app/",
+      img: "images/netflix.JPG",
       img2: "images/icons/ico_netflix.png",
       git: "https://github.com/ITHPARK/Nexflix-App"
     },
@@ -41,7 +41,7 @@ const Project = () => {
               ] 
       },
       url: "https://ithpark.github.io/react-recoil-app/",
-      img: "images/Recoil.jpg",
+      img: "images/Recoil.JPG",
       img2: "images/icons/ico_recoil.png",
       git: "https://github.com/ITHPARK/react-recoil-app"
     },
@@ -56,7 +56,7 @@ const Project = () => {
               ] 
       },
       url: "https://ithpark.github.io/react-redux-app/",
-      img: "images/Redux.jpg",
+      img: "images/Redux.JPG",
       img2: "images/icons/ico_redux.png",
       git: "https://github.com/ITHPARK/react-redux-app"
     },
