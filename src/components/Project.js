@@ -1,6 +1,14 @@
 import React, {useState} from 'react'
 import Modal from './Modal';
 import {Link} from 'react-router-dom';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import {projectData} from '../lib/data'
+import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
 
 
 const Project = () => {
@@ -31,13 +39,12 @@ const Project = () => {
     {
       id: "react-recoil-app",
       title: "Recoil을 활용한 카페 관리자 페이지",
-      text: {
+      text: {   
         skill: ['REACT', 'RECOIL'],
         word: [
                 "jsonplaceholder post api를 활용한 비동기 요청으로 데이터를 받아 카페 글 리스트를 만들었습니다.", 
                 "데이터로 내려받은 전체 글 개수에 따라 페이징을 한 페이지에 10개의 글을 노출하도록 구현하였습니다.",
                 "FACEBOOK에서 출시한 전역 상태관리 라이브러리 RECOIL을 활용하여 관리자 페이지에서 글의 비공개 제목 수정이 가능합니다.",
-
               ] 
       },
       url: "https://ithpark.github.io/react-recoil-app/",
@@ -81,43 +88,93 @@ const Project = () => {
 
 
   return (
-    <>
-      <div className="article project">
-        <h2 className='content_tit'>Project</h2>
+    <div className="article project">
+        <div className='article_inner'>
+          <h2 className='white'>
+            PROJECT
+          </h2>
 
-        <div className='content_box'>
-          <ul className='project_list'>
-          {
-            info.map((item) => {
-              return(
-                <li onClick={() => handleModalOpen(item)} key={item.id}>
-                <Link>
-                  <div className='project_box'>
-                    <img src={item.img2} alt=""/>
-                  </div>
-                  <h4>{item.title}</h4>
-                </Link> 
-              </li>
-              )
-            })
-          }
-          </ul>
+          <div className='content'>
+            <Swiper
+              className='project_swiper'
+              modules={[Navigation, Pagination]}
+              spaceBetween={50}
+              slidesPerView={1}
+              navigation={{
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+              }}
+              pagination={                
+                { 
+                  el : '.project-pagination',
+                  clickable: true
+                 }
+
+              }
+              
+            > 
+
+              {
+                projectData.map((item, idx) => {
+                  return(
+                    <SwiperSlide className='project_wrapper' key={idx}>
+                      <div className='project_box'>
+                        <h3>{item.title}</h3>
+                        <div className='img_box'>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={20}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                          > 
+                            {item.img.map((img, idx) => {
+                              return(
+                                <SwiperSlide>
+                                  <img src={img} alt={`이미지${idx}`}/>
+                                </SwiperSlide>
+                              )
+                            })}
+                          </Swiper>
+                        </div>
+                        <ul className='info'>
+                            {
+                              item.info.map((text, idx) => {
+                                return(
+                                  <li key={idx}>
+                                    <p>{text}</p>
+                                  </li>
+                                )
+                              })
+                            }
+                        </ul>
+                        <div className='url'>
+                            <p>URL : <Link to={item.url} target="_blank">{item.url}</Link></p>
+                            <p>GIT : <Link to={item.git} target="_blank">{item.git}</Link></p>
+                        </div>
+                        
+                      </div>
+                    </SwiperSlide>
+                  )
+                })
+              }
+
+              <div className='swiper-navigation project-navigation'>
+                <button className='swiper-button-prev'>
+                   <FaArrowLeft size="100%" />
+                </button>
+                
+                <button className='swiper-button-next'>
+                   <FaArrowRight size="100%" />
+                </button>
+              </div>   
+
+              <div className='swiper-pagination project-pagination'></div>        
+            </Swiper>
+          </div>  
         </div>
+        
       </div>
-
-      {modalStatus &&
-        <Modal 
-          setModalStatus = {setModalStatus}
-          handleModalClose={handleModalClose} 
-          title = {selectedProjectId.title}
-          text = {selectedProjectId.text}
-          url = {selectedProjectId.url}
-          img = {selectedProjectId.img}
-          img2 = {selectedProjectId.img2}
-          git={selectedProjectId.git}
-        /> 
-      } 
-    </>
   )
 }
 

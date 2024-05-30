@@ -10,26 +10,26 @@ const Cover = () => {
   let word;  
 
   if(path.pathname == "/") {
-    word = "PORTFOLIO";
+    word = "안녕하세요 \n 신입 개발자 박태현입니다.";
   }else {
     word = path.pathname.replace(/\//g, '').toUpperCase();
   }
 
   const wordArr = word.split('');
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    // path가 변경될 때마다 pageName 상태를 초기화
-    setPageName('');
+  //   // path가 변경될 때마다 pageName 상태를 초기화
+  //   setPageName('');
 
-    // idx 상태도 초기화
-    setIdx(0);
+  //   // idx 상태도 초기화
+  //   setIdx(0);
 
-    // animate 초기화
+  //   // animate 초기화
 
-    setAnimateStart(false);
+  //   setAnimateStart(false);
 
-  }, [path]);
+  // }, [path]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -55,16 +55,13 @@ const Cover = () => {
   }, [wordArr, idx]);
 
   return (
-    <div className='cover_section'>
-      <div className='cover_inner'>
-        <h2>Front-end</h2>
-        <p className='page_name'>{pageName}</p>
-      </div>
-
+    <section className='cover_section'>
+      <p className='page_name'>{pageName}</p>
+     
       <div className={`arrow ${animateStart ? "animate": "hide"}`}>
         <span className='icon'></span>
       </div>
-    </div>
+    </section>
   );
 };
 
