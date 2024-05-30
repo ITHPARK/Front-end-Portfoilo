@@ -137,6 +137,18 @@ const Project = () => {
                             })}
                           </Swiper>
                         </div>
+                        <div className='use_skills'>
+                            {
+                              item.useSkill.map((sk) => {
+                                return (
+                                  <div className='skill_box'>
+                                    <span>{sk[0]}</span>
+                                    <span>{sk[1]}</span>
+                                  </div>
+                                )
+                              })
+                            }
+                        </div>
                         <ul className='info'>
                             {
                               item.info.map((text, idx) => {

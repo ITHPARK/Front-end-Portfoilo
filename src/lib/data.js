@@ -53,7 +53,7 @@ export const skillData = [
 export const projectData = [
     {
         title: "REACT 넷플릭스",
-        useSkill: ["REACT", "SASS"],
+        useSkill: [[<FaReact   size={25} color='#61dafb'/>, "REACT"], [<FaSass size={25} color='#cb6899'/>, "SASS"]],
         info: [
             "The Movie DB Api를 받아 axios를 활용하여 비동기 통신으로 데이터를 받아 각종 영화 정보를 나타내었습니다.", 
             "SASS를 활용하여 레이아웃 디자인과 각 디바이스를 지원하는 반응형 작업을 진행하였습니다.",
@@ -68,7 +68,7 @@ export const projectData = [
     },
     {
         title: "NEXT.JS 유튜브 뮤직",
-        useSkill: ["NEXT.JS", "TAILWIND CSS"],
+        useSkill: [[<RiNextjsFill size={25} color='#000'/>, "NEXT.JS"], [<SiTailwindcss size={25} color='#0bb6d4'/>, "TAILWIND CSS"]],
         info: [
             "더미 데이터를 만들어서 유튜브 뮤직을 제작했습니다.", 
             "Tilwind CSS를 활용하여 레이아웃 디자인과 반응형을 제작하였습니다.",
@@ -82,7 +82,7 @@ export const projectData = [
     },
     {
         title: "Recoil을 활용한 카페 관리자 페이지",
-        useSkill: ['REACT', 'RECOIL'],
+        useSkill: [[<FaReact   size={25} color='#61dafb'/>, "REACT"], [<SiRecoil size={25} color='#2a60df' />, "RECOIL"]],
         info: [
             "jsonplaceholder post api를 활용한 비동기 요청으로 데이터를 받아 카페 글 리스트를 만들었습니다.", 
             "데이터로 내려받은 전체 글 개수에 따라 페이징을 한 페이지에 10개의 글을 노출하도록 구현하였습니다.",
@@ -95,7 +95,7 @@ export const projectData = [
     },
     {
         title: "Redux을 활용한 장바구니 페이지",
-        useSkill: ['REACT', 'REDUX'],
+        useSkill: [[<FaReact   size={25} color='#61dafb'/>, "REACT"], [<SiRedux size={25} color='#7f42c3' />, "REDUX"]],
         info: [
             "전역상태관리 라이브러리 redux를 이용하여 장바구니 상품 리스트를 만들었습니다.", 
             "reducer 함수를 생성하여 상품을 담고 장바구니로 이동하여 상품의 수량과 삭제를 설정하고 총 결제금액까지 나타내도록 구현하였습니다.",
