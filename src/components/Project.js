@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {projectData} from '../lib/data'
 import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 
 
 const Project = () => {
@@ -109,7 +110,6 @@ const Project = () => {
                   el : '.project-pagination',
                   clickable: true
                  }
-
               }
               
             > 
@@ -125,8 +125,16 @@ const Project = () => {
                             modules={[Navigation, Pagination]}
                             spaceBetween={20}
                             slidesPerView={1}
-                            navigation
-                            pagination={{ clickable: true }}
+                            navigation={{
+                              prevEl: '.inner-swiper-button-prev',
+                              nextEl: '.inner-swiper-button-next',
+                            }}
+                            pagination={                
+                              { 
+                                el : '.img-pagination',
+                                clickable: true
+                               }
+                            }
                           > 
                             {item.img.map((img, idx) => {
                               return(
@@ -135,6 +143,18 @@ const Project = () => {
                                 </SwiperSlide>
                               )
                             })}
+                            <div className='swiper-navigation img-navigation'>
+                              <button className='inner-swiper-button-prev'>
+                                <IoIosArrowBack size={40} fill='#007aff'/>
+                              </button>
+                              
+                              <button className='inner-swiper-button-next'>
+                                <IoIosArrowForward  size={40} fill='#007aff'/>
+                              </button>
+                            </div>
+                            <div className='swiper-pagination img-pagination'>
+
+                            </div>
                           </Swiper>
                         </div>
                         <div className='use_skills'>

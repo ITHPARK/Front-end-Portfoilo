@@ -31,6 +31,23 @@
                 img {
                     width: 100%;
                 }
+
+                .img-navigation {
+
+                    padding: 0 20px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    button {
+                        background: none;
+                        border: none;
+                    }
+                }
             }
 
             .use_skills {
