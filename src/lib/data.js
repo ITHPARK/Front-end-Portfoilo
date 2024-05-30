@@ -88,7 +88,7 @@ export const projectData = [
             "데이터로 내려받은 전체 글 개수에 따라 페이징을 한 페이지에 10개의 글을 노출하도록 구현하였습니다.",
             "FACEBOOK에서 출시한 전역 상태관리 라이브러리 RECOIL을 활용하여 관리자 페이지에서 글의 비공개 제목 수정이 가능합니다.",
           ],
-        img: ["images/recoil_1.png", "images/recoil_2.png", "images/recoil_3.png"],
+        img: ["images/recoil_1.png", "images/recoil_2.png"],
         url: "https://ithpark.github.io/react-recoil-app/",
         git: "https://github.com/ITHPARK/react-recoil-app"
 
