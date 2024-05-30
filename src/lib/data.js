@@ -77,8 +77,8 @@ export const projectData = [
             "재생, 정지, 이전곡, 다음곡 등 컨트롤러 기능을 구현하였습니다.", 
         ],
         img: ["images/ytmusic_1.png", "images/ytmusic_2.png", "images/ytmusic_3.png", "images/ytmusic_4.png", "images/ytmusic_5.png", ],
-        url: "https://react-netflix-65fce.web.app/",
-        git: "https://github.com/ITHPARK/Nexflix-App"
+        url: "https://next-ytmusic.vercel.app/",
+        git: "https://github.com/ITHPARK/next-ytmusic"
     },
     {
         title: "Recoil을 활용한 카페 관리자 페이지",
